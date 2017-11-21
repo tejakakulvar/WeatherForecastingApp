@@ -1,11 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import chartgenerator from '../components/chartgenerator'
 
 class WeatherListComponents extends React.Component{
+
   citydata (weather) {
+    const listoftemp = weather.list.map(weather => weather.main.temp);
+    console.log(listoftemp);
     return (
       <tr key={weather.city.id}>
       <td>{weather.city.name}</td>
+      <td> <h1> hi </h1> </td>
+      <td>
+        <chartgenerator />
+      </td>
       </tr>);
   }
   render(){
@@ -13,10 +21,10 @@ class WeatherListComponents extends React.Component{
         <table className="table table-hover">
           <thead>
             <tr>
-              <td> City </td>
-              <td> Temperature </td>
-              <td> Pressure </td>
-              <td> Humidity </td>
+              <td><b> City </b></td>
+              <td><b> Temperature </b></td>
+              <td><b> Pressure </b></td>
+              <td><b> Humidity </b></td>
             </tr>
           </thead>
           <tbody>
