@@ -5,7 +5,7 @@ class chartgenerator extends React.Component{
   render(){
     return(
       <div>
-        <h1> Hi </h1>
+        <h1> Hihdahd </h1>
       </div>
 
     );
