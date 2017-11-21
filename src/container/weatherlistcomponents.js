@@ -5,16 +5,11 @@ import chartgenerator from '../components/chartgenerator'
 class WeatherListComponents extends React.Component{
 
   citydata (weather) {
-    const listoftemp = weather.list.map(weather => weather.main.temp);
-    console.log(listoftemp);
     return (
-      <tr key={weather.city.id}>
-      <td>{weather.city.name}</td>
-      <td> <h1> hi </h1> </td>
-      <td>
-        <chartgenerator />
-      </td>
-      </tr>);
+      <div>
+      <chartgenerator />
+      </div>
+    );
   }
   render(){
       return(
